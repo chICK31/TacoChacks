@@ -14,12 +14,14 @@ header img {
 h3 {
     font-weight: bold;
     color: #ff4500; /* A fiery red color */
+    font-size: 48px; /* Increase as needed */
 }
 header {
     background-color: #ff4500;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 5px; /* Decreased padding */
+    font-size: 20px;
 }
 
 nav {
@@ -170,5 +172,49 @@ footer p {
     20% { opacity: 1; }
     33% { opacity: 1; }
     53% { opacity: 0; }
+    100% { opacity: 0; }
+}
+#breakfast-slideshow {
+    position: relative;
+    height: 300px; /* adjust as needed */
+    width: 100%;
+    overflow: hidden;
+    margin: 20px -40px; /* add margins as needed */
+}
+
+#breakfast-slideshow .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: breakfastSlideShow 9s infinite; /* each image will show for 9 seconds */
+}
+
+#breakfast-slideshow .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Adjusted to 'contain' */
+    object-position: left;
+}
+
+#breakfast-slideshow .slide:nth-child(1) {
+    animation-delay: 0s; /* first image will show immediately */
+}
+
+#breakfast-slideshow .slide:nth-child(2) {
+    animation-delay: 3s; /* second image will show after 3 seconds */
+}
+
+#breakfast-slideshow .slide:nth-child(3) {
+    animation-delay: 6s; /* third image will show after 6 seconds */
+}
+
+/* Add more rules for more images */
+
+@keyframes breakfastSlideShow {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    30% { opacity: 1; }
+    50% { opacity: 0; }
     100% { opacity: 0; }
 }
