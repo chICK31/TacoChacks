@@ -1,220 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffebcd;
-    color: #8b4513;
-}
-
-header img {
-    width: 400px; /* Adjust the width as needed */
-    height: auto; /* This allows the image to maintain its aspect ratio */
-    padding: 5px; /* Add some space around the image */
-    margin: 10px; /* Add more space around the image */
-    float: left;
-}
-h3 {
-    font-weight: bold;
-    color: #ff4500; /* A fiery red color */
-    font-size: 48px; /* Increase as needed */
-}
-header {
-    background-color: #ff4500;
-    color: white;
-    text-align: center;
-    padding: 5px; /* Decreased padding */
-    font-size: 20px;
-}
-
-nav {
-    background-color: #ffa500;
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.5s ease; /* Transition property added for smooth color change */
-}
-
-nav ul li a:hover {
-    color: #ff4500; /* Color when link is hovered */
-}
-
-nav ul li a:active {
-    color: #8b4513; /* Color when link is clicked */
-}
-
-section {
-    margin: 20px;
-}
-
-.order-image-container a {
-    display: inline-block;
-    width: 100px; /* Adjust the width as needed */
-    height: 100px; /* Adjust the height as needed */
-}
-
-.order-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.order-image-container a:hover {
-    transform: scale(1.1);
-}
-
-
-.order-image-container a:hover {
-    transform: scale(1.1);
-}
-
-footer {
-    background-color: #ff4500;
-    color: white;
-    text-align: center;
-    padding: 5px; /* Adjust this value to make the footer smaller */
-    position: static;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-footer a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    background-color: blue;
-    padding: 10px 10px;
-    border-radius: 5px;
-    transition: transform 0.3s; /* Place transition property here */
-}
-
-footer a:hover {
-    transform: scale(1.1);
-}
-
-footer p {
-    margin-top: 5px; /* Adjust this value based on your new footer size */
-}
-.header-container {
     display: flex;
-    align-items: center; /* Aligns items vertically in the middle */
-    justify-content: center; /* Aligns items horizontally in the middle */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
 }
 
-@media screen and (max-width: 600px) {
-    .header-container {
-        flex-direction: column; /* Stacks items vertically */
-    }
-    .header-container img {
-        margin-bottom: 20px; /* Adds some space between the image and the text */
-    }
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-@media screen and (min-width: 601px) {
-    .header-container {
-        flex-direction: row; /* Places items in a row */
-    }
-    .header-container h1, .header-container h2 {
-        margin-left: 20px; /* Adds some space between the image and the text */
-    }
-}
-#slideshow {
-    position: relative;
-    height: 300px; /* adjust as needed */
-    width: 100%;
-    overflow: hidden;
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    animation: slideShow 9s infinite; /* each image will show for 9 seconds */
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Adjusted to 'contain' */
-    object-position: left;
-}
-
-
-
-.slide:nth-child(1) {
-    animation-delay: 0s; /* first image will show immediately */
-}
-
-.slide:nth-child(2) {
-    animation-delay: 3s; /* second image will show after 3 seconds */
-}
-
-.slide:nth-child(3) {
-    animation-delay: 6s; /* third image will show after 6 seconds */
-}
-
-/* Add more rules for more images */
-
-@keyframes slideShow {
-    0% { opacity: 0; }
-    20% { opacity: 1; }
-    33% { opacity: 1; }
-    53% { opacity: 0; }
-    100% { opacity: 0; }
-}
-#breakfast-slideshow {
-    position: relative;
-    height: 300px; /* adjust as needed */
-    width: 100%;
-    overflow: hidden;
-    margin: 20px -40px; /* add margins as needed */
-}
-
-#breakfast-slideshow .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    animation: breakfastSlideShow 9s infinite; /* each image will show for 9 seconds */
-}
-
-#breakfast-slideshow .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Adjusted to 'contain' */
-    object-position: left;
-}
-
-#breakfast-slideshow .slide:nth-child(1) {
-    animation-delay: 0s; /* first image will show immediately */
-}
-
-#breakfast-slideshow .slide:nth-child(2) {
-    animation-delay: 3s; /* second image will show after 3 seconds */
-}
-
-#breakfast-slideshow .slide:nth-child(3) {
-    animation-delay: 6s; /* third image will show after 6 seconds */
-}
-
-/* Add more rules for more images */
-
-@keyframes breakfastSlideShow {
-    0% { opacity: 0; }
-    20% { opacity: 1; }
-    30% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 0; }
+button.on {
+    background-color: #4CAF50;
+    color: white;
 }
